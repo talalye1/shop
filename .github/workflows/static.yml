@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<html lang="ar">
+ <head> 
+  <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" type="text/css" href="https://htmlcodeplay.com/htmlcodeplayapp/externalfiles/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+</html>
+ <!-- Optional Bootstrap theme -->
+ <link rel="stylesheet" href="https://htmlcodeplay.com/htmlcodeplayapp/externalfiles/bootstrap/css/bootstrap-theme.css">
+<body>
+<head>
+  <title>صفحة ويب</title>
+  <style>
+    body {
+      background-color: #d5d6d0;
+    }
+  </style>
+</head>
+<body>
+  <!-- محتوى الصفحة -->
+</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    #book {
+      width: 100%px;
+      height: 500px;
+      position: relative;
+      margin: 0px 
+    }
+    .page {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      display: none;
+    }
+    .page.active {
+      display: block;
+    }
+    #controls {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+    #print-btn {
+      margin-left: 5px;
+    }
+    #zoom-btn {
+      margin-left: 0px;
+    }
+    #views {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+    #likes {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #d5d6d0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            max-width: 60px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%px;
+            border-radius: 0px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0s;
+        }
+
+        .main-image:hover {
+            transform: scale(0.098);
+        }
+
+        .title {
+            text-align: center;
+            margin: 0px 0;
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0px;
+            margin: 0px 0;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 0px;
+            cursor: pointer;
+            transition: all 0s;
+        }
+
+        .like-btn {
+            background-color: #ff4757;
+            color: white;
+        }
+
+        .share-btn {
+            background-color: #2ed573;
+            color: white;
+        }
+
+        .download-btn {
+            background-color: #3742fa;
+            color: white;
+        }
+
+        /* Popup Styles */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+        }
+
+        .popup-content {
+            position: relative;
+            max-width: 90%;
+            margin: 2% auto;
+            background: white;
+            border-radius: 0px;
+            padding: 0px;
+            animation: popup 0.3s ease-out;
+        }
+
+        @keyframes popup {
+            from {transform: scale(0.5); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+
+        .similar-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0px;
+            margin-top: 0px;
+        }
+
+        .similar-img {
+            width: 100%;
+            height: 100%px;
+            object-fit: cover;
+            border-radius: 0px;
+            cursor: pointer;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-size: 0px;
+            cursor: pointer;
+            color: #333;
+        }
+  .carousel {
+   background: #2f4357;
+  <style>
+    body {
+      background-color: #d5d6d0;
+    }
+  </style>
+</head>
+<body>
+  <!-- محتوى الصفحة -->
+</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    #book {
+      width: 100%px;
+      height: 500px;
+      position: relative;
+      margin: 0px 
+    }
+    .page {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      display: none;
+    }
+    .page.active {
+      display: block;
+    }
+    #controls {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+    #print-btn {
+      margin-left: 5px;
+    }
+    #zoom-btn {
+      margin-left: 0px;
+    }
+    #views {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+    #likes {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #d5d6d0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            max-width: 60px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%px;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0s;
+        }
+
+        .main-image:hover {
+            transform: scale(0.098);
+        }
+
+        .title {
+            text-align: center;
+            margin: 0px 0;
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0px;
+            margin: 0px 0;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 0px;
+            cursor: pointer;
+            transition: all 0s;
+        }
+
+        .like-btn {
+            background-color: #ff4757;
+            color: white;
+        }
+
+        .share-btn {
+            background-color: #2ed573;
+            color: white;
+        }
+
+        .download-btn {
+            background-color: #3742fa;
+            color: white;
+        }
+
+        /* Popup Styles */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+        }
+
+        .popup-content {
+            position: relative;
+            max-width: 90%;
+            margin: 2% auto;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            animation: popup 0.3s ease-out;
+        }
+
+        @keyframes popup {
+            from {transform: scale(0.5); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+
+        .similar-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0px;
+            margin-top: 0px;
+        }
+
+        .similar-img {
+            width: 100%;
+            height: 100%px;
+            object-fit: cover;
+            border-radius: 0px;
+            cursor: pointer;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-size: 0px;
+            cursor: pointer;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<center>
+      <img src="https://scontent.fjed6-2.fna.fbcdn.net/v/t39.30808-6/480918560_122101693010776568_6481199618040583321_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-4dIaRUIUAAQ7kNvgGvc1Oc&_nc_oc=AdjNXvhEU-oba0Noxux8HxTs8_XZaf3CHlAzy1k4A1fwJZaEMYdVYm5JJViz4UVKe39pa8DPe81G7VYJzUyEKyT5&_nc_zt=23&_nc_ht=scontent.fjed6-2.fna&_nc_gid=AMgIrcAymj67IwIBlwO9Ot2&oh=00_AYDW9LGgw9jhApg9blQBFyMogVoW0B_Jaun56_AcYiyNAQ&oe=67BFE58B" height="100"alt="Third Slide" width="100%">
+    </div>
+  <div class="btn-group btn-group-justified"> 
+   <a href="#" class="btn btn-info">الأخبار</a> 
+   <a href="#" class="btn btn-primary">الصحيفة</a> 
+   <a href="#" class="btn btn-info">المقابلات</a> 
+   <a href="#" class="btn btn-info">الحوارات</a> 
+</div>
+   <h3><span style="color: green;"> قائمة إصدارات صحيفة صدى النصر</span></h3>
+<img src="https://scontent.fjed5-2.fna.fbcdn.net/v/t39.30808-6/481246870_122110657472776568_3126851730379893818_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=4EM3qX2lUV8Q7kNvgGFtNDF&_nc_oc=AdgAsqxvonQ913qGn7pUvXW_SZ_I6l0EB8XX6mh31EGaWD20m9WUcMINDdZEa7vHQyKecZdqi-izZvQmqm4XasVW&_nc_zt=23&_nc_ht=scontent.fjed5-2.fna&_nc_gid=Ao8W8lkpk6D25TCdjo-9kKw&oh=00_AYAPPrksyMgiq-snSc7EYN5dLs0oOx4fQILEvUgBaSqy5w&oe=67CD82EB" class="img-responsive" alt="Cloudy Sky">
+
+<!-- Button HTML (to Trigger Modal) -->
+ <input type="button" data-toggle="modal" data-target="#myModal0" class="btn btn-lg btn-primary" value="استعراض القائمة">
+       <button class="btn like-btn"> (2) إعجاب</button>
+       <button class="btn share-btn">مشاركة</button>
+
+ <!-- Modal HTML -->
+ <div id="myModal0" class="modal fade">
+  <div class="modal-dialog">
+   <div class="modal-content">
+      <div <img src="https://scontent.fjed6-2.fna.fbcdn.net/v/t39.30808-6/480918560_122101693010776568_6481199618040583321_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-4dIaRUIUAAQ7kNvgGvc1Oc&_nc_oc=AdjNXvhEU-oba0Noxux8HxTs8_XZaf3CHlAzy1k4A1fwJZaEMYdVYm5JJViz4UVKe39pa8DPe81G7VYJzUyEKyT5&_nc_zt=23&_nc_ht=scontent.fjed6-2.fna&_nc_gid=AMgIrcAymj67IwIBlwO9Ot2&oh=00_AYDW9LGgw9jhApg9blQBFyMogVoW0B_Jaun56_AcYiyNAQ&oe=67BFE58B" height="100"alt="Third Slide" width="100%"><div>
+    </div>
+   </div>
+  </div>
+ </div>
+</p>
+      <img src="https://scontent.fjed6-2.fna.fbcdn.net/v/t39.30808-6/480918560_122101693010776568_6481199618040583321_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-4dIaRUIUAAQ7kNvgGvc1Oc&_nc_oc=AdjNXvhEU-oba0Noxux8HxTs8_XZaf3CHlAzy1k4A1fwJZaEMYdVYm5JJViz4UVKe39pa8DPe81G7VYJzUyEKyT5&_nc_zt=23&_nc_ht=scontent.fjed6-2.fna&_nc_gid=AMgIrcAymj67IwIBlwO9Ot2&oh=00_AYDW9LGgw9jhApg9blQBFyMogVoW0B_Jaun56_AcYiyNAQ&oe=67BFE58B" height="100"alt="Third Slide" width="100%">
+   <a href="#" class="btn btn-info">الأخبار</a> 
+   <a href="#" class="btn btn-primary">الصحيفة</a> 
+   <a href="#" class="btn btn-info">المقابلات</a> 
+   <a href="#" class="btn btn-info">الحوارات</a> <img src="https://scontent.fjed5-2.fna.fbcdn.net/v/t39.30808-6/481246870_122110657472776568_3126851730379893818_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=4EM3qX2lUV8Q7kNvgGFtNDF&_nc_oc=AdgAsqxvonQ913qGn7pUvXW_SZ_I6l0EB8XX6mh31EGaWD20m9WUcMINDdZEa7vHQyKecZdqi-izZvQmqm4XasVW&_nc_zt=23&_nc_ht=scontent.fjed5-2.fna&_nc_gid=Ao8W8lkpk6D25TCdjo-9kKw&oh=00_AYAPPrksyMgiq-snSc7EYN5dLs0oOx4fQILEvUgBaSqy5w&oe=67CD82EB" class="img-responsive" alt="Cloudy Sky">
+
+<!-- Button HTML (to Trigger Modal) -->
+ <input type="button" data-toggle="modal" data-target="#myModal1" class="btn btn-lg btn-primary" value="قراءه">
+       <button class="btn like-btn"> (2) إعجاب</button>
+       <button class="btn share-btn">مشاركة</button>
+   <a href="https://www.facebook.com/download/530572102848156/%D8%B5%D8%AD%D9%8A%D9%81%D8%A9%20%D8%B5%D8%AF%D9%89%20%D8%A7%D9%84%D9%86%D8%B5%D8%B1%20%D8%A7%D9%84%D8%B9%D8%AF%D8%AF%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%20%D8%B4%D9%87%D8%B1%20%D8%AF%D9%8A%D8%B3%D9%85%D8%A8%D8%B1.pdf?av=100009166017469&eav=AfbE_vJHZDuSUWlWLIJE8B11UreUo3t5xIZ1NAPkms99574--XHYiNZdmpOrqJG0IEE&paipv=0&hash=Acp1tf42l_P7NOIq2JE&__cft__[0]=AZWdXd0NxdvHGZnwamaoReL1ltOoQahVtTRDcGJ4cKcZpT1UdGnibFihGiId7wKNqVaV-2J4hHBMrjlPJvECMKrQjDYU48UV9ywN5VRCDdJ76ySX_hNTws96vH26CPh28FZg_ayZmon3Ron1qcXD5UtXpqhieCK5aKCKa8jYOrO7IQ&__tn__=H-R" class="btn btn-primary"> تحميل</a>
+
+ <!-- Modal HTML -->
+ <div id="myModal1" class="modal fade">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header"><h3 style="text-align: center;"><span style="color: green;">العدد الاول</span>
+    </div>
+    
+     <div class="lots-of-text">
+    <div class="modal-footer">
+   <span style="color: green;"><div id="book"><div class="page active" style="background-image: url('https://scontent.fjed6-1.fna.fbcdn.net/v/t39.30808-6/480699185_122102708006776568_7721842458276528725_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7LOT-Fgl8IYQ7kNvgEQqAyZ&_nc_oc=AdgkC4mX4xjTM159lJcqUTWp8lOJe9n1IFumCJvnildYNfscF_y_oD7Rw7K_udFOkL7HzMoUDRX6jQOQlnnn6lDQ&_nc_zt=23&_nc_ht=scontent.fjed6-1.fna&_nc_gid=AnEiVRcs17RpgXZQMKEXDb4&oh=00_AYB8Q0Uxu8h5caMJECV1tT9yElqpQigQrdbabXotBjuGIQ&oe=67C19169');"></div><div class="page" style="background-image: url('https://scontent.fjed5-2.fna.fbcdn.net/v/t39.30808-6/480960885_122101781732776568_6761165152309139710_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=SEqfWB34p74Q7kNvgGOjSpd&_nc_oc=AdiIG4s52iYjwrmLvP8jIwwxLnrWzWjGT6iJAAhuTf1PN-5Rc8Vnqhq5FjKgxMXAqwhtGbx8m3VY8bDzcn07ndyl&_nc_zt=23&_nc_ht=scontent.fjed5-2.fna&_nc_gid=AirZhaBR28LmV_XvceLtuc4&oh=00_AYA5JqC-Xzy1ve9iPEtp9ZiUFX2kmm5OlT-iifiY6wpUvA&oe=67C01417');"></div><div class="page" style="background-image: url('https://scontent.fjed6-1.fna.fbcdn.net/v/t39.30808-6/481059921_122101781768776568_2590816880511965721_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=egT0BOo2D6AQ7kNvgHwlNPj&_nc_oc=AdjFvPLNJ8czIU6PF_zs6NbesiGYprjlkn3ufkv0A8LTMFALTCYJwbgfUO6WDdhXkJN5YYc8qC7lz6JRcoGMD89Y&_nc_zt=23&_nc_ht=scontent.fjed6-1.fna&_nc_gid=A3ZG_Z1_Emc8QvkjK2XTRF2&oh=00_AYCgWeUDgksYZ4HhwfuitZ103pqH4Eqp-o7vlPGtLRelGg&oe=67C02F95');"></div><div class="page" style="background-image: url('https://scontent.fjed6-1.fna.fbcdn.net/v/t39.30808-6/481161498_122101781804776568_8872476266809718346_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=IJ2FPvj9FLQQ7kNvgGsQxsb&_nc_oc=Adj4DKRwCesKP6QIP6HF3O24ZywaMadzcMHqus4oAmEsiC3BcHCxKWVGwfDET4kDlnYP4_W5NnB6e618rQZchAeo&_nc_zt=23&_nc_ht=scontent.fjed6-1.fna&_nc_gid=A-CEj9bEgByric0idc5IiaI&oh=00_AYBjt1-Pt9bIMOo4s__ggS3h0e9rROYhBSZXh4pd3I0pfA&oe=67C01540');"></div><div class="page" style="background-image: url('https://scontent.fjed5-1.fna.fbcdn.net/v/t39.30808-6/481896715_122103357548776568_1476215449274454151_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vtBqetvrqQsQ7kNvgGz6mK4&_nc_oc=AdgSk-v5aoU11JbLqd4bPUWKiqyWG9No8F58BAsBwpmwcClAf7lFcJ93WfvcP5BSh4ZuPjIH9O90A9antlyyXsBG&_nc_zt=23&_nc_ht=scontent.fjed5-1.fna&_nc_gid=AoTINEngTHGgrbwszFDVrCh&oh=00_AYBaLTyOS6fVEwDEh5itVPELadJ6DvQMSfwY8K2ThvxmfA&oe=67C251DB');"></div><div class="page" style="background-image: url('https://scontent.fjed6-2.fna.fbcdn.net/v/t39.30808-6/481348717_122103357698776568_1641146891363967369_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=d1_rgH_q_5gQ7kNvgFczd-2&_nc_oc=AdgLyYX77Kkuk198HelYXLCuolJiu2RQ1mgOZN5o_3yx_skvg3sQZip52GVbhr1ATsea7-tXPNtpkjeDc3McUD1J&_nc_zt=23&_nc_ht=scontent.fjed6-2.fna&_nc_gid=A5ZZ3rXwzXwJNDOkSjfoLuB&oh=00_AYDadm0dePLyL0lVHIuS237cEklp9zy8ekg3PZR0ue8_Qg&oe=67C27606');"></div><div class="page" style="background-image: url('https://scontent.fjed6-1.fna.fbcdn.net/v/t39.30808-6/481270383_122103357770776568_5558918801898953160_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ixY7sp4edREQ7kNvgELkRO9&_nc_oc=AdhCT7iQlRgt1g99nVoOmOpKTL86RLM4IS38b7DI8oVgRCQ5C6XzPVmjuOB_YqkTF-wpJYbhEjSObTV2ZfYviSpH&_nc_zt=23&_nc_ht=scontent.fjed6-1.fna&_nc_gid=AqqfIF0oOHg6KX3jN3Mlg8Y&oh=00_AYAuKD3g0lowx79mg7p1oCvSy1dhb3tW7JHENk5_QViyVw&oe=67C2611D');"></div><div class="page" style="background-image: url('https://scontent.fjed6-2.fna.fbcdn.net/v/t39.30808-6/481898575_122103357920776568_7376596055980073700_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=djN60RBwyE4Q7kNvgG4N7Oy&_nc_oc=AdhbETEMuuzDE0FWXL9ZE4vLFhHxbP7H8E_iU6JlUT31hUTp1jscWc4Qeygv3INXwpyMXRJY1lZW1jgSUGq1AlX2&_nc_zt=23&_nc_ht=scontent.fjed6-2.fna&_nc_gid=A__CiKplimnk8gFPhOiVBFV&oh=00_AYDg7ImfxwOpBuozLAIw9JdC_ptLUcn_eMdd6MoqMo59Ow&oe=67C2571E');"></div><div class="page" style="background-image: url('https://scontent.fjed6-2.fna.fbcdn.net/v/t39.30808-6/480709201_122103358142776568_5133718240380452638_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gltCSIgVI2MQ7kNvgG-jqWh&_nc_oc=Adhw6WAQHrwi9Xw1NOUWP1_aVKkViIhtybv5mPs020Mmz0_-uIo5NPGUBLZO7z8QkAsD6TP9_CbqFgti7aftSbIj&_nc_zt=23&_nc_ht=scontent.fjed6-2.fna&_nc_gid=AtRIPLyBC1elrYQ90c8kQpL&oh=00_AYA4LBtA1ZdyEHqj4w12t6ACH-459kXkntW7WQA3JJuviQ&oe=67C261B8');"></div><div class="page" style="background-image: url('https://scontent.fjed5-2.fna.fbcdn.net/v/t39.30808-6/481705655_122103358178776568_1181648157738125111_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=q9uQ4lLFszMQ7kNvgHnzT2x&_nc_oc=AdjOgTN9xeaWhX0jDqXXECI1heUHwCIfbJWQyrHKAnhI145QmHRZY6konSMr6VcmvWnXuZ-fzbF9utRflBinTT9u&_nc_zt=23&_nc_ht=scontent.fjed5-2.fna&_nc_gid=AOj5oJvi0KBlcJe7aqm13lQ&oh=00_AYC7cI75ssa5KMUHylL428SR2k_ON6nWapPMm3UC0AqLqA&oe=67C27419');"></div><div class="page" style="background-image: url('https://scontent.fjed6-2.fna.fbcdn.net/v/t39.30808-6/480689632_122103358214776568_2375272388273211365_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=veRN08Mj75YQ7kNvgEC3IwR&_nc_oc=AdhX_ldWLC36XcjTQyk1Bphe03F3KHEwnfsNkyUh2bNdVfsUpEzKD3tJbwq21nXp1DI-RrNYkz0QqdoLOwIwRUGS&_nc_zt=23&_nc_ht=scontent.fjed6-2.fna&_nc_gid=AgSUMOktwKchSn_Tq8RI2ih&oh=00_AYB8VG3KDlsKU-jqF7Np3BXqEBCQ820y91ttijg4UX5ajQ&oe=67C259C9');"></div><div class="page" style="background-image: url('https://scontent.fjed5-2.fna.fbcdn.net/v/t39.30808-6/481072299_122103358232776568_4643983407571739402_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ddmwQViPJMAQ7kNvgEneVIT&_nc_oc=AdivWgnOaGG227dQyzApx2cF8sWE1zthyufO0VCzt9zJfZnY6XeFaXvU221wt-4mMzOS7oc5VaLM360KTgsP7hM6&_nc_zt=23&_nc_ht=scontent.fjed5-2.fna&_nc_gid=A46mJj4dzxI8yEkEUhDmKyg&oh=00_AYBF7Sakc_duNOo7wVG3vlOxMi51EabcBYV2s0e9xDl-Yw&oe=67C284A0');"></div><div class="page" style="background-image: url('https://scontent.fjed5-1.fna.fbcdn.net/v/t39.30808-6/480676005_122103358256776568_3367452570329051664_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=hKozNsFGSrcQ7kNvgF7aL9O&_nc_oc=Adjb8v-061G9W-atkxmFFobJFxR7Qn6hZyAs_g9v1Tkl-KLFKrCtRRak2Y_FvX8T8vv3w1_kqdqUO-6mQt5nzu2x&_nc_zt=23&_nc_ht=scontent.fjed5-1.fna&_nc_gid=Ar1V5DHe8P0Oh8b0Qldm9Nm&oh=00_AYAT_xbV-tDHoym__XQyQczus9Awc8J1Q7UniRTCZwp6uA&oe=67C25B1E');"></div></div></span>
+     </div>
+     </div>
+    <div class="modal-footer">
+    <button class="btn like-btn">إعجاب</button>
+       <button class="btn share-btn">مشاركة</button>
+   <a href="https://www.facebook.com/download/530572102848156/%D8%B5%D8%AD%D9%8A%D9%81%D8%A9%20%D8%B5%D8%AF%D9%89%20%D8%A7%D9%84%D9%86%D8%B5%D8%B1%20%D8%A7%D9%84%D8%B9%D8%AF%D8%AF%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%20%D8%B4%D9%87%D8%B1%20%D8%AF%D9%8A%D8%B3%D9%85%D8%A8%D8%B1.pdf?av=100009166017469&eav=AfbE_vJHZDuSUWlWLIJE8B11UreUo3t5xIZ1NAPkms99574--XHYiNZdmpOrqJG0IEE&paipv=0&hash=Acp1tf42l_P7NOIq2JE&__cft__[0]=AZWdXd0NxdvHGZnwamaoReL1ltOoQahVtTRDcGJ4cKcZpT1UdGnibFihGiId7wKNqVaV-2J4hHBMrjlPJvECMKrQjDYU48UV9ywN5VRCDdJ76ySX_hNTws96vH26CPh28FZg_ayZmon3Ron1qcXD5UtXpqhieCK5aKCKa8jYOrO7IQ&__tn__=H-R" class="btn btn-primary"> تحميل</a> 
+     <button type="button" class="btn like-btn" data-dismiss="modal">رجوع</button>
+    </div>
+   </div>
+  </div>
+ </div>
+</p>
+<img src="https://scontent.fjed5-2.fna.fbcdn.net/v/t39.30808-6/481246870_122110657472776568_3126851730379893818_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=4EM3qX2lUV8Q7kNvgGFtNDF&_nc_oc=AdgAsqxvonQ913qGn7pUvXW_SZ_I6l0EB8XX6mh31EGaWD20m9WUcMINDdZEa7vHQyKecZdqi-izZvQmqm4XasVW&_nc_zt=23&_nc_ht=scontent.fjed5-2.fna&_nc_gid=Ao8W8lkpk6D25TCdjo-9kKw&oh=00_AYAPPrksyMgiq-snSc7EYN5dLs0oOx4fQILEvUgBaSqy5w&oe=67CD82EB" class="img-responsive" alt="Cloudy Sky">
+
+<!-- Button HTML (to Trigger Modal) -->
+ <input type="button" data-toggle="modal" data-target="#myModal2" class="btn btn-lg btn-primary" value="قراءه">
+       <button class="btn like-btn"> (2) إعجاب</button>
+       <button class="btn share-btn">مشاركة</button>
+   <a href="https://www.facebook.com/download/530572102848156/%D8%B5%D8%AD%D9%8A%D9%81%D8%A9%20%D8%B5%D8%A
